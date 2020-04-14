@@ -12,4 +12,4 @@
 3. tf.train.batch將處理後的圖片做成批次數據
 
 ### 輸出結果
-![](output/output.png)
+![](output/output.PNG)
