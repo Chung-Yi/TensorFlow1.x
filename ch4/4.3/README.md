@@ -7,7 +7,8 @@
 
 
 ### 產生queue中的批次資料
-1. tf.train.slice_input_producer產生queue
+1. tf.train.slice_input_producer產生queue，如果有帶參數num_epochs，表示將數據的圖片全部讀取過num_epochs次，例如全部圖片有3張，  
+   num_epochs=2，就會產生2x3張圖片，如果num_epochs=N，表示不限循環次數，直到其他終止條件達成才會停止。除此之外，如果有帶num_epochs，必須要同時tf.global_variables_initializer()，tf.local_variables_initializer()
 2. 將queue裡的圖片進行處理
 3. tf.train.batch將處理後的圖片做成批次數據
 
